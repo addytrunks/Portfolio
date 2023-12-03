@@ -7,6 +7,14 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   title: 'Portfolio',
   description: "Adhithya Srivatsan's portfolio",
+  keywords: ['portfolio', 'adhithya', 'srivatsan'],
+  applicationName: 'addy.srivats',
+   category:"portfolio",
+   openGraph:{
+    type:"website",
+    countryName:"India",
+    title:"Portfolio",
+   }
 }
 
 export default function RootLayout({
