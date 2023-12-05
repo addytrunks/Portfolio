@@ -1,12 +1,14 @@
-import Header from '@/components/Header'
-import Image from 'next/image'
+import Header from "@/components/Header";
+import Hero from "@/components/Hero";
 
 export default function Home() {
   return (
-    <div>
-      <Header/>
+    <div className="bg-[rgb(36,36,36)] text-white min-h-screen z-0">
+      <Header />
 
-      {/* Hero */}
+      <section className="">
+        <Hero />
+      </section>
 
       {/* About */}
 
@@ -16,5 +18,5 @@ export default function Home() {
 
       {/* Contact Me */}
     </div>
-  )
+  );
 }
