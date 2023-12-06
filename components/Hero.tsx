@@ -15,6 +15,7 @@ export default function Hero() {
     ],
     loop: true,
     delaySpeed: 2000,
+    deleteSpeed: 50,
   });
   return (
     <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
