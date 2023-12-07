@@ -18,10 +18,10 @@ const Skills = ({skills}:Props) => {
 
       <div className="grid grid-cols-4 gap-5">
             {skills?.slice(0,skills.length/2).map((skill) => (
-              <Skill progress={skill.progress} imageUrl={urlFor(skill.image).url()}/>
+              <Skill key={skill._id} progress={skill.progress} imageUrl={urlFor(skill.image).url()}/>
             ))}
             {skills?.slice(skills.length/2,skills.length).map((skill) => (
-              <Skill progress={skill.progress} imageUrl={urlFor(skill.image).url()} directionLeft/>
+              <Skill key={skill._id} progress={skill.progress} imageUrl={urlFor(skill.image).url()} directionLeft/>
             ))}
       </div>
     </div>
