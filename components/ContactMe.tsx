@@ -1,5 +1,6 @@
 "use client"
 
+import { PageInfo } from "@/type";
 import { EnvelopeIcon, MapPinIcon, PhoneIcon } from "@heroicons/react/20/solid";
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
@@ -10,8 +11,12 @@ type Inputs = {
     subject:string,
     message:string
 }
+
+interface Props {
+  pageInfo: PageInfo;
+}
  
-const ContactMe = () => {
+const ContactMe = ({ pageInfo }: Props) => {
 
     const {
         register,
@@ -36,17 +41,17 @@ const ContactMe = () => {
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
             <PhoneIcon className="text-indigo-400 h-7 w-7" />
-            <p className="text-2xl">+91 9840742924</p>
+            <p className="text-2xl">{pageInfo?.phoneNumber}</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-indigo-400 h-7 w-7 animate-pulse" />
-            <p className="text-2xl">addysrivats@gmail.com</p>
+            <p className="text-2xl">{pageInfo?.email}</p>
           </div>
 
           <div className="flex items-center space-x-5 justify-center">
             <MapPinIcon className="text-indigo-400 h-7 w-7 animate-pulse" />
-            <p className="text-2xl">23/83 Tulsi Apartments</p>
+            <p className="text-2xl">{pageInfo?.address}</p>
           </div>
         </div>
 

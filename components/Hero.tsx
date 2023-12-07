@@ -5,13 +5,20 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
 import Link from "next/link";
+import { PageInfo } from "@/type";
+import { urlFor } from "@/sanity/lib/client";
 
-export default function Hero() {
-  const [text, count] = useTypewriter({
+interface Props{
+  pageInfo: PageInfo
+}
+
+export default function Hero({pageInfo}:Props) {
+  const [text] = useTypewriter({
     words: [
       "Hi !, The Name's Adhithya Srivatsan",
       "Guy-who-loves-protein.plt",
       "<ButLovesToCodeMore />",
+      'echo "Certified-Procrastinator" >>'
     ],
     loop: true,
     delaySpeed: 2000,
@@ -24,13 +31,13 @@ export default function Hero() {
         <Image
           className="rounded-full object-cover mx-auto"
           fill
-          src="/prof.jpg"
+          src={urlFor(pageInfo.profilePic).url()}
           alt="img"
         />
       </div>
       <div className="z-20">
         <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[8px]">
-          Web Developer | Aspiring Data Scientist
+          {pageInfo?.role}
         </h2>
         <h1 className="text-4xl lg:text-5xl font-semibold">
           <span className="mr-3">{text}</span>

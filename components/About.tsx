@@ -2,8 +2,15 @@
 
 import React from "react";
 import { motion } from "framer-motion";
+import { PageInfo } from "@/type";
+import pageInfo from "@/sanity/schemas/pageInfo";
+import { urlFor } from "@/sanity/lib/client";
 
-const About = () => {
+interface Props{
+  pageInfo: PageInfo
+}
+
+const About = ({pageInfo}:Props) => {
   return (
     <motion.div
       initial={{
@@ -33,7 +40,7 @@ const About = () => {
         transition={{
           duration: 0.5,
         }}
-        src="/my.jpg"
+        src={urlFor(pageInfo.heroImage).url()}
         className="-mb-20 md:mb-0 flex-shrink-0 w-56 h-56 rounded-full object-cover md:rounded-lg md:w-64 md:h-96 xl:w-[450px] xl:h-[500px]"
       />
 
@@ -44,15 +51,7 @@ const About = () => {
           background
         </h4>
         <p className="text-base">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
-          vulputate in ante eget fermentum. Maecenas euismod mauris at hendrerit
-          ultrices. Aenean a egestas urna. Sed arcu urna, tempus id neque at,
-          volutpat maximus turpis. In maximus euismod libero iaculis
-          scelerisque. Sed auctor ante est, eu vestibulum nisl vestibulum in.
-          Pellentesque imperdiet dolor ac turpis dignissim luctus. Nulla nulla
-          turpis, finibus et viverra non, varius nec dui. Fusce et leo et elit
-          lobortis molestie. Donec volutpat id eros nec commodo. Nam et
-          dignissim mi.
+          {pageInfo?.backgroundInformation}
         </p>
       </div>
     </motion.div>

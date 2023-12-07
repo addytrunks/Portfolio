@@ -1,11 +1,16 @@
 "use client";
 
+import { Social } from "@/type";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import { SocialIcon } from "react-social-icons";
 
-const Header = () => {
+interface Props{
+  socials:Social[]
+}
+
+const Header = ({socials}:Props) => {
 
   const [isMounted, setIsMounted] = React.useState(false);
 
@@ -33,21 +38,14 @@ const Header = () => {
         }}
         className="flex items-center"
       >
-        <SocialIcon
-          url="https://www.instagram.com/addy__srivats/"
+        {socials?.map((social) => (
+          <SocialIcon
+          key={social._id}
+          url={social.url}
           fgColor="gray"
           bgColor="transparent"
         />
-        <SocialIcon
-          url="https://github.com/addytrunks"
-          fgColor="gray"
-          bgColor="transparent"
-        />
-        <SocialIcon
-          url="https://twitter.com/AdhithyaSrivat2"
-          fgColor="gray"
-          bgColor="transparent"
-        />
+        ))}
       </motion.div>
 
       <Link href="#contact">
