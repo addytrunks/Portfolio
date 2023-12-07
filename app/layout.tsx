@@ -10,11 +10,6 @@ export const metadata: Metadata = {
   keywords: ['portfolio', 'adhithya', 'srivatsan'],
   applicationName: 'addy.srivats',
    category:"portfolio",
-   openGraph:{
-    type:"website",
-    countryName:"India",
-    title:"Portfolio",
-   }
 }
 
 export default function RootLayout({
