@@ -4,7 +4,7 @@ import { Technology } from "@/type";
 import { urlFor } from "@/sanity/lib/client";
 
 interface Props{
-  skills:Technology[]
+  skills:Technology[] | null
 }
 
 const Skills = ({skills}:Props) => {

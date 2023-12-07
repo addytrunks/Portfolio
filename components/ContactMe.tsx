@@ -13,7 +13,7 @@ type Inputs = {
 }
 
 interface Props {
-  pageInfo: PageInfo;
+  pageInfo: PageInfo | null;
 }
  
 const ContactMe = ({ pageInfo }: Props) => {

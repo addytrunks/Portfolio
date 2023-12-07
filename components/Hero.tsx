@@ -9,7 +9,7 @@ import { PageInfo } from "@/type";
 import { urlFor } from "@/sanity/lib/client";
 
 interface Props{
-  pageInfo: PageInfo
+  pageInfo: PageInfo | null
 }
 
 export default function Hero({pageInfo}:Props) {
@@ -31,7 +31,7 @@ export default function Hero({pageInfo}:Props) {
         <Image
           className="rounded-full object-cover mx-auto"
           fill
-          src={urlFor(pageInfo.profilePic).url()}
+          src={urlFor(pageInfo?.profilePic).url()}
           alt="img"
         />
       </div>
