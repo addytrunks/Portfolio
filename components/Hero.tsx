@@ -44,7 +44,7 @@ export default function Hero({pageInfo}:Props) {
           <Cursor cursorColor="#ADD8E6" />
         </h1>
 
-        <div className="pt-5">
+        <div className="pt-5 flex items-center space-x-2 justify-center">
           <Link href="#about">
             <button className="heroButton">About</button>
           </Link>
