@@ -50,7 +50,7 @@ const About = ({pageInfo}:Props) => {
           <span className="underline decoration-indigo-400">little</span>{" "}
           background
         </h4>
-        <p className="text-base">
+        <p className="text-base font-medium text-justify">
           {pageInfo?.backgroundInformation}
         </p>
       </div>
