@@ -3,10 +3,11 @@ import { PageInfo,} from "@/type";
 import { groq } from "next-sanity";
 import { NextResponse } from "next/server";
 
+export const dynamic = 'force-dynamic'
+
 const query = groq`
     *[_type == "pageInfo"][0]
 `;
-
 
 export const GET = async (req: Request) => {
   try {

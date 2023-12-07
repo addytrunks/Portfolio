@@ -3,6 +3,8 @@ import { Technology } from "@/type";
 import { groq } from "next-sanity";
 import { NextResponse } from "next/server";
 
+export const dynamic = 'force-dynamic'
+
 const query = groq`
     *[_type == "skill"]
 `;
