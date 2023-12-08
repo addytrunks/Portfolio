@@ -1,40 +1,43 @@
-import axios from "axios";
 import { PageInfo, Project, Social, Technology } from "./type";
+import { client } from "./lib/sanity";
+import { groq } from "next-sanity";
+
 
 export const fetchSkills = async () => {
-  const res = await axios.get(`${process.env.NEXT_PUBLIC_BASE_URL}/api/skills`);
-
-  const data: Technology[] = await res.data;
-
-  return data;
+  const query = groq`
+  *[_type == "skill"]
+  `;
+  const skills: Technology[] = await client.fetch(query);
+  
+  return skills;
 };
 
 export const fetchSocials = async () => {
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/socials`
-  );
-
-  const data: Social[] = await res.data;
-
-  return data;
+  const query = groq`
+  *[_type == "social"]
+  `;
+  const socials: Social[] = await client.fetch(query);
+  
+  return socials;
 };
 
 export const fetchProjects = async () => {
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/projects`
-  );
-
-  const data: Project[] = await res.data;
-
-  return data;
+  const query = groq`
+  *[_type == "project"]{
+    ...,
+    technologies[]->
+  }
+  `;
+  const projects: Project[] = await client.fetch(query);
+  
+  return projects;
 };
 
 export const fetchPageInfo = async () => {
-  const res = await axios.get(
-    `${process.env.NEXT_PUBLIC_BASE_URL}/api/pageInfo`
-  );
-
-  const data: PageInfo = await res.data;
-
-  return data;
+  const query = groq`
+  *[_type == "pageInfo"][0]
+  `;
+  const pageInfo: PageInfo = await client.fetch(query);
+  
+  return pageInfo;
 };
