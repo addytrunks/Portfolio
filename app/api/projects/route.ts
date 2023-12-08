@@ -1,4 +1,4 @@
-import { client } from "@/sanity/lib/client";
+import { client } from "@/lib/sanity";
 import { Project } from "@/type";
 import { groq } from "next-sanity";
 import { NextResponse } from "next/server";

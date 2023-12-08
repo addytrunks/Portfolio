@@ -1,6 +1,6 @@
 "use client";
 
-import { urlFor } from "@/sanity/lib/client";
+import { urlFor } from "@/lib/sanity";
 import { Project } from "@/type";
 import { motion } from "framer-motion";
 import Image from "next/image";

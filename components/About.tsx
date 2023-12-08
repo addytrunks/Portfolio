@@ -3,9 +3,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { PageInfo } from "@/type";
-import pageInfo from "@/sanity/schemas/pageInfo";
-import { urlFor } from "@/sanity/lib/client";
-
+import { urlFor } from "@/lib/sanity";
 interface Props{
   pageInfo: PageInfo | null
 }

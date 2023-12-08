@@ -6,7 +6,7 @@ import BackgroundCircles from "./BackgroundCircles";
 import Image from "next/image";
 import Link from "next/link";
 import { PageInfo } from "@/type";
-import { urlFor } from "@/sanity/lib/client";
+import { urlFor } from "@/lib/sanity";
 
 interface Props{
   pageInfo: PageInfo | null

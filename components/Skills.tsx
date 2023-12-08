@@ -1,8 +1,7 @@
 import React from "react";
 import Skill from "./Skill";
 import { Technology } from "@/type";
-import { urlFor } from "@/sanity/lib/client";
-
+import { urlFor } from "@/lib/sanity";
 interface Props{
   skills:Technology[] | null
 }
@@ -18,10 +17,10 @@ const Skills = ({skills}:Props) => {
 
       <div className="grid grid-cols-4 gap-5">
             {skills?.slice(0,skills.length/2).map((skill) => (
-              <Skill key={skill._id} progress={skill.progress} imageUrl={urlFor(skill.image).url()}/>
+              <Skill key={skill._id} progress={skill.progress} imageUrl={urlFor(skill?.image).url()}/>
             ))}
             {skills?.slice(skills.length/2,skills.length).map((skill) => (
-              <Skill key={skill._id} progress={skill.progress} imageUrl={urlFor(skill.image).url()} directionLeft/>
+              <Skill key={skill._id} progress={skill.progress} imageUrl={urlFor(skill?.image).url()} directionLeft/>
             ))}
       </div>
     </div>
