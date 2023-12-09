@@ -48,11 +48,6 @@ const ContactMe = ({ pageInfo }: Props) => {
             <EnvelopeIcon className="text-indigo-400 h-7 w-7 animate-pulse" />
             <p className="text-2xl">{pageInfo?.email}</p>
           </div>
-
-          <div className="flex items-center space-x-5 justify-center">
-            <MapPinIcon className="text-indigo-400 h-7 w-7 animate-pulse" />
-            <p className="text-2xl">{pageInfo?.address}</p>
-          </div>
         </div>
 
         <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col space-y-2 w-fit mx-auto" autoComplete="off">
