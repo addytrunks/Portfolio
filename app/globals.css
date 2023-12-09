@@ -10,10 +10,10 @@ html {
 
 @layer components{
   .heroButton{
-    @apply px-6 py-2 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-indigo-300/40 hover:text-indigo-400;
+    @apply xl:px-6 xl:py-2 px-4 py-1 border border-[#242424] rounded-full uppercase text-xs tracking-widest text-gray-500 transition-all hover:border-indigo-300/40 hover:text-indigo-400;
   }
 
   .contactButton{
-    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:text-indigo-400/70 focus:border-indigo-400/40 hover:border-indigo-400/40;
+    @apply outline-none bg-slate-400/10 rounded-sm border-b px-6 py-4 border-[#242424] text-gray-500 placeholder-gray-500 transition-all focus:text-indigo-400/70 focus:border-indigo-400/40 hover:border-indigo-400/40 w-full;
   }
 }

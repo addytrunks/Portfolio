@@ -44,11 +44,11 @@ const Projects = ({ projects }: Props) => {
                 }}
                 viewport={{ once: true }}
                 src={urlFor(project?.image).url()}
-                className="w-[400px] h-[300px] cursor-pointer mt-5"
+                className="xl:w-[400px] xl:h-[250px] w-[200px] h-[150px] cursor-pointer mt-5"
               />
             </Link>
             <div className="px-0 space-y-8 md:px-10 max-w-6xl">
-              <h4 className="text-4xl font-semibold text-center">
+              <h4 className="xl:text-4xl text-xl font-semibold text-center">
                 <span className="underline decoration-indigo-400">
                   Case Study {i + 1} of {projects?.length}:{" "}
                 </span>
@@ -63,7 +63,7 @@ const Projects = ({ projects }: Props) => {
                 ))}
               </div>
 
-              <p className="text-lg md:text-left font-medium text-justify">
+              <p className="xl:text-lg text-sm md:text-left font-medium text-justify">
                 {project?.summary}
               </p>
             </div>

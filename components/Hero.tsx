@@ -36,10 +36,10 @@ export default function Hero({pageInfo}:Props) {
         />
       </div>
       <div className="z-20">
-        <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[8px]">
+        <h2 className="xl:text-sm text-xs uppercase text-gray-500 pb-4 tracking-[8px]">
           {pageInfo?.role}
         </h2>
-        <h1 className="text-4xl lg:text-5xl font-semibold">
+        <h1 className="text-2xl lg:text-5xl font-semibold">
           <span className="mr-3">{text}</span>
           <Cursor cursorColor="#ADD8E6" />
         </h1>

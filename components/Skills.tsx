@@ -15,12 +15,9 @@ const Skills = ({skills}:Props) => {
 
       <h3 className="absolute top-36 uppercase tracking-[3px] text-gray-600 text-sm">Hover over a skill for current proficiency</h3>
 
-      <div className="grid grid-cols-4 gap-5 xl:pt-20">
-            {skills?.slice(0,skills.length/2).map((skill) => (
+      <div className="grid grid-cols-3 xl:grid-cols-5 md:grid-cols-4 sm:grid-col-3 gap-5 xl:pt-20 ">
+            {skills?.map((skill) => (
               <Skill key={skill._id} progress={skill.progress} imageUrl={urlFor(skill?.image).url()}/>
-            ))}
-            {skills?.slice(skills.length/2,skills.length).map((skill) => (
-              <Skill key={skill._id} progress={skill.progress} imageUrl={urlFor(skill?.image).url()} directionLeft/>
             ))}
       </div>
     </div>
