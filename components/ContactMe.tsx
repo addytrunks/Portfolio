@@ -40,11 +40,6 @@ const ContactMe = ({ pageInfo }: Props) => {
 
         <div className="space-y-10">
           <div className="flex items-center space-x-5 justify-center">
-            <PhoneIcon className="text-indigo-400 h-7 w-7" />
-            <p className="text-2xl">{pageInfo?.phoneNumber}</p>
-          </div>
-
-          <div className="flex items-center space-x-5 justify-center">
             <EnvelopeIcon className="text-indigo-400 h-7 w-7 animate-pulse" />
             <p className="text-2xl">{pageInfo?.email}</p>
           </div>
