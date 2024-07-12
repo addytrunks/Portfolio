@@ -6,6 +6,8 @@ import Projects from "@/components/Projects";
 import Skills from "@/components/Skills";
 import { fetchPageInfo, fetchProjects, fetchSkills, fetchSocials } from "@/utils";
 
+export const revalidate = 1;
+
 export default async function Home() {
   const skills = await fetchSkills();
   const projects = await fetchProjects();

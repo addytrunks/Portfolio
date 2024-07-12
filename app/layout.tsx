@@ -12,6 +12,8 @@ export const metadata: Metadata = {
    category:"portfolio",
 }
 
+export const revalidate = 10;
+
 export default function RootLayout({
   children,
 }: {
