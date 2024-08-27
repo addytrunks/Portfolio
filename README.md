@@ -1,1 +1,1 @@
-Stunning portfolio created(going to be) with Next JS and Tailwind CSS.
+Stunning portfolio created with Next JS and Tailwind CSS.
