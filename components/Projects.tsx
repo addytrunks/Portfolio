@@ -82,7 +82,7 @@ const Projects = ({ projects }: Props) => {
                   }}
                   viewport={{ once: true }}
                   src={urlFor(project?.image).url()}
-                  className="xl:w-[400px] xl:h-[250px] w-[200px] h-[150px] cursor-pointer mt-5"
+                  className="xl:w-[400px] xl:h-[250px] w-[200px] h-[150px] cursor-pointer mt-5 rounded-md"
                 />
               </Link>
               <div className="px-0 space-y-8 md:px-10 max-w-6xl">
